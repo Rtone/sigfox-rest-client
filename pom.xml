@@ -8,5 +8,68 @@
     <artifactId>sigfox-client</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <properties>
+        <retrofit.version>2.1.0</retrofit.version>
+        <lombok.version>1.16.12</lombok.version>
+        <okhttp3.version>3.3.0</okhttp3.version>
+    </properties>
+
+
+    <dependencies>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.squareup.retrofit2</groupId>
+            <artifactId>retrofit</artifactId>
+            <version>${retrofit.version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.squareup.retrofit2/adapter-rxjava -->
+        <dependency>
+            <groupId>com.squareup.retrofit2</groupId>
+            <artifactId>adapter-rxjava</artifactId>
+            <version>${retrofit.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.squareup.retrofit2</groupId>
+            <artifactId>converter-jackson</artifactId>
+            <version>${retrofit.version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.squareup.okhttp3/logging-interceptor -->
+        <dependency>
+            <groupId>com.squareup.okhttp3</groupId>
+            <artifactId>logging-interceptor</artifactId>
+            <version>${okhttp3.version}</version>
+        </dependency>
+
+
+    </dependencies>
+
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.0.0</version>
+            </plugin>
+        </plugins>
+    </build>
+
 
 </project>
