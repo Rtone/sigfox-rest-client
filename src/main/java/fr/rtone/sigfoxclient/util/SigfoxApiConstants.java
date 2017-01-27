@@ -6,4 +6,8 @@ package fr.rtone.sigfoxclient.util;
 public class SigfoxApiConstants {
 
     public static final String BASE_URL = "https://backend.sigfox.com";
+
+    public static final String GROUPS_API = "api/groups";
+
+
 }

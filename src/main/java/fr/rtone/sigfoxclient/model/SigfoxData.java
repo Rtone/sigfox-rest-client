@@ -1,5 +1,6 @@
 package fr.rtone.sigfoxclient.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 
 import java.util.List;
@@ -10,6 +11,7 @@ import java.util.List;
  * @Author: Hani
  */
 @Data
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class SigfoxData<T extends AbstractModel> {
 
     private List<T> data;
