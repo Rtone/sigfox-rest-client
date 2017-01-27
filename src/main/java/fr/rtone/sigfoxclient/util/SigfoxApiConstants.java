@@ -9,5 +9,7 @@ public class SigfoxApiConstants {
 
     public static final String GROUPS_API = "api/groups";
 
+    public static final String DEVICE_TYPE_API = "api/devicetypes";
+
 
 }
