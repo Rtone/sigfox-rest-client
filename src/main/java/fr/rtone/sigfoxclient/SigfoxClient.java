@@ -1,10 +1,13 @@
 package fr.rtone.sigfoxclient;
 
-import fr.rtone.sigfoxclient.model.SigfoxData;
+import fr.rtone.sigfoxclient.model.Callback;
 import fr.rtone.sigfoxclient.model.DeviceType;
 import fr.rtone.sigfoxclient.model.Group;
+import fr.rtone.sigfoxclient.model.SigfoxData;
 import retrofit2.http.*;
 import rx.Observable;
+
+import java.util.List;
 
 import static fr.rtone.sigfoxclient.util.SigfoxApiConstants.DEVICE_TYPE_API;
 import static fr.rtone.sigfoxclient.util.SigfoxApiConstants.GROUPS_API;
@@ -103,4 +106,53 @@ public interface SigfoxClient {
      */
     @POST(DEVICE_TYPE_API + "/delete")
     Observable<Void> deleteDeviceType(@Body DeviceType deviceType);
+
+    /**
+     * Get the list of callbacks by device type
+     *
+     * @param deviceTypeId device type id
+     * @return array of callback objects
+     */
+    @GET(DEVICE_TYPE_API + "/{deviceTypeId}/callbacks")
+    Observable<SigfoxData<Callback>> getCallbackList(@Path("deviceTypeId") String deviceTypeId);
+
+    /**
+     * Create a new callback
+     *
+     * @param deviceTypeId device type id
+     * @param callbacks    callback to create
+     * @return array of created callback's ids
+     */
+    @POST(DEVICE_TYPE_API + "/{deviceTypeId}/callbacks/new")
+    Observable<List<String>> createCallbackList(@Path("deviceTypeId") String deviceTypeId, @Body List<Callback> callbacks);
+
+    /**
+     * Delete an existing callback
+     *
+     * @param deviceTypeId device type id
+     * @param callbackId   callback id
+     */
+    @POST(DEVICE_TYPE_API + "/{deviceTypeId}/callbacks/{callbackId}/delete")
+    Observable<Void> deleteCallback(@Path("deviceTypeId") String deviceTypeId, @Path("callbackId") String callbackId);
+
+    /**
+     * Enable or disable an existing callback
+     *
+     * @param deviceTypeId device type id
+     * @param callbackId   callback id
+     * @param enabled      true to enable the callback, false to disable it
+     */
+    @POST(DEVICE_TYPE_API + "/{deviceTypeId}/callbacks/{callbackId}/enable")
+    Observable<Void> enableCallback(@Path("deviceTypeId") String deviceTypeId, @Path("callbackId") String callbackId, @Query("enabled") boolean enabled);
+
+    /**
+     * The given callback will be selected as the downlink one
+     *
+     * @param deviceTypeId device type id
+     * @param callbackId
+     * @return
+     */
+    @POST(DEVICE_TYPE_API + "/{deviceTypeId}/callbacks/{callbackId}/downlink")
+    Observable<Void> setDownlinkCallback(@Path("deviceTypeId") String deviceTypeId, @Path("callbackId") String callbackId);
+
 }
