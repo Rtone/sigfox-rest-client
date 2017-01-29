@@ -1,8 +1,8 @@
 package fr.rtone.sigfoxclient;
 
 import fr.rtone.sigfoxclient.model.SigfoxData;
-import fr.rtone.sigfoxclient.model.group.DeviceType;
-import fr.rtone.sigfoxclient.model.group.Group;
+import fr.rtone.sigfoxclient.model.DeviceType;
+import fr.rtone.sigfoxclient.model.Group;
 import retrofit2.http.*;
 import rx.Observable;
 

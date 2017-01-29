@@ -1,7 +1,6 @@
-package fr.rtone.sigfoxclient.model.group;
+package fr.rtone.sigfoxclient.model;
 
 import com.fasterxml.jackson.annotation.JsonValue;
-import fr.rtone.sigfoxclient.model.AbstractModel;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 

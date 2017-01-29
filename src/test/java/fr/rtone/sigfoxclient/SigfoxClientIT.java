@@ -1,7 +1,7 @@
 package fr.rtone.sigfoxclient;
 
 import fr.rtone.sigfoxclient.model.SigfoxData;
-import fr.rtone.sigfoxclient.model.group.Group;
+import fr.rtone.sigfoxclient.model.Group;
 import okhttp3.logging.HttpLoggingInterceptor;
 import org.junit.Before;
 import org.junit.Test;

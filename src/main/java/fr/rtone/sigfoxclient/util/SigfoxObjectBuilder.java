@@ -1,4 +1,4 @@
-package fr.rtone.sigfoxclient.model;
+package fr.rtone.sigfoxclient.util;
 
 import java.util.ArrayList;
 import java.util.List;
