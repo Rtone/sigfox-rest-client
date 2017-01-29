@@ -6,7 +6,7 @@
 
     <groupId>fr.rtone</groupId>
     <artifactId>sigfox-client</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
 
     <properties>
         <retrofit.version>2.1.0</retrofit.version>
@@ -15,6 +15,14 @@
         <junit.version>4.12</junit.version>
         <junit.version>4.12</junit.version>
     </properties>
+
+    <distributionManagement>
+        <repository>
+            <id>pfiot-repository</id>
+            <name>Platform IoT Rtone</name>
+            <url>https://redmine.rtone.fr/artifactory/pfiot-respository</url>
+        </repository>
+    </distributionManagement>
 
 
     <dependencies>
@@ -109,6 +117,11 @@
                         </configuration>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>2.8.2</version>
             </plugin>
         </plugins>
     </build>
