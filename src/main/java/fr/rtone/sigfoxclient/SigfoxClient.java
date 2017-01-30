@@ -1,16 +1,12 @@
 package fr.rtone.sigfoxclient;
 
-import fr.rtone.sigfoxclient.model.Callback;
-import fr.rtone.sigfoxclient.model.DeviceType;
-import fr.rtone.sigfoxclient.model.Group;
-import fr.rtone.sigfoxclient.model.SigfoxData;
+import fr.rtone.sigfoxclient.model.*;
 import retrofit2.http.*;
 import rx.Observable;
 
 import java.util.List;
 
-import static fr.rtone.sigfoxclient.util.SigfoxApiConstants.DEVICE_TYPE_API;
-import static fr.rtone.sigfoxclient.util.SigfoxApiConstants.GROUPS_API;
+import static fr.rtone.sigfoxclient.util.SigfoxApiConstants.*;
 
 /**
  * @Author: Hani
@@ -149,10 +145,60 @@ public interface SigfoxClient {
      * The given callback will be selected as the downlink one
      *
      * @param deviceTypeId device type id
-     * @param callbackId
+     * @param callbackId  callback id
      * @return
      */
     @POST(DEVICE_TYPE_API + "/{deviceTypeId}/callbacks/{callbackId}/downlink")
     Observable<Void> setDownlinkCallback(@Path("deviceTypeId") String deviceTypeId, @Path("callbackId") String callbackId);
+
+    /**
+     * Get the list of devices by device type
+     *
+     * @param deviceTypeId device type id
+     * @param snr          optional, filter the device list according to the average signal to noise ratio of the last 25 received messages
+     * @param limit        maximum number of status events to return, default 100
+     * @param offset       number of devices to skip (between 0 and 5000)
+     * @return array of device objects
+     */
+    @GET(DEVICE_TYPE_API + "/{deviceTypeId}/devices")
+    Observable<SigfoxData<Device>> getDeviceList(@Path("deviceTypeId") String deviceTypeId, @Query("snr") String snr, @Query("limit") Integer limit, @Query("offset") Integer offset);
+
+    /**
+     * Get device Information
+     *
+     * @param deviceId device id
+     * @return device object
+     */
+    @GET(DEVICE_API + "/{deviceId}")
+    Observable<Device> getDevice(@Path("deviceId") String deviceId);
+
+    /**
+     * Creates new devices by providing a list of identifier, the registration is performed in async way.
+     *
+     * @param deviceTypeId    device type Id
+     * @param registerRequest identifiers of the devices to be created
+     * @return device registration response with registration job id to check whether the registration has success or not.
+     */
+    @POST(DEVICE_TYPE_API + "/{deviceTypeId}/devices/bulk/create/async")
+    Observable<DeviceRegisterResponse> registerNewDevices(@Path("deviceTypeId") String deviceTypeId, @Body DeviceRegisterRequest registerRequest);
+
+    /**
+     * Check if the registration is success or not
+     *
+     * @param deviceTypeId device type id
+     * @param jobId        job id returned by the creation service
+     * @return the status of the given devices creation job
+     */
+    @GET(DEVICE_TYPE_API + "/{deviceTypeId}/registration/{jobId}")
+    Observable<DeviceRegistrationStatus> checkDevicesRegistration(@Path("deviceTypeId") String deviceTypeId, @Path("jobId") String jobId);
+
+    /**
+     * Edit a list of devices
+     *
+     * @param devices a list of devices to be edited
+     * @return return edition operation status
+     */
+    @POST(DEVICE_API + "/bulk/edit")
+    Observable<DeviceEditResponse> editDeviceList(@Body List<Device> devices);
 
 }

@@ -11,5 +11,6 @@ public class SigfoxApiConstants {
 
     public static final String DEVICE_TYPE_API = "api/devicetypes";
 
+    public static final String DEVICE_API = "api/devices";
 
 }
