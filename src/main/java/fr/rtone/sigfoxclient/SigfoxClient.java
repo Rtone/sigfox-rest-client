@@ -201,4 +201,13 @@ public interface SigfoxClient {
     @POST(DEVICE_API + "/bulk/edit")
     Observable<DeviceEditResponse> editDeviceList(@Body List<Device> devices);
 
+    /**
+     * Get the messages that were sent by a device, in reverse chronological order (most recent messages first).
+     *
+     * @param deviceId device id
+     * @return Messages list
+     */
+    @GET(DEVICE_API + "/{deviceId}/messages")
+    Observable<SigfoxData<Message>> getMessages(@Path("deviceId") String deviceId);
+
 }
