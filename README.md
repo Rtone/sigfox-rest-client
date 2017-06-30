@@ -72,7 +72,22 @@ It's pretty simple to use the SDK, usage typically looks like this :
  ----------
 ## Contribute 
 
-TODO.... 
+If you would like to contribute code, you can do so through GitHub by forking the repository and sending a **pull request** 
+
+Here some guidelines to we'd like you to follow :
+
+### Pull Requests
+
+Before you submit your pull request consider the following guidelines:
+
+ - Make your changes in a new git branch
+ - Follow our coding style 
+ - If the change closes an issue, note that at the end of the commit description ex. **"Fixes #18"**
+
+### Code style
+When submitting code, please ensure you follow the [Intellij IDEA's code style](https://www.jetbrains.com/help/idea/reformatting-source-code.html). 
+
+ 
 
 
  
