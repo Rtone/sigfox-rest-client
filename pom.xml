@@ -7,6 +7,42 @@
     <groupId>fr.rtone</groupId>
     <artifactId>sigfox-client</artifactId>
     <version>1.0</version>
+    <packaging>jar</packaging>
+
+    <name>Sigfox Rest Client</name>
+    <description>Sigfox Rest Client makes working with sigfox backend easier</description>
+    <url>https://github.com/Rtone/sigfox-rest-client</url>
+
+
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <scm>
+        <url>https://github.com/Rtone/sigfox-rest-client</url>
+        <connection>scm:git:https://github.com/Rtone/sigfox-rest-client.git</connection>
+        <developerConnection>scm:git:https://github.com/Rtone/sigfox-rest-client.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+
+    <developers>
+        <developer>
+           <name>Hani Benzouache</name>
+            <email>hani@rtone.fr</email>
+            <organization>Rtone</organization>
+            <organizationUrl>https://rtone.fr/</organizationUrl>
+        </developer>
+        <developer>
+            <name>Romain Dequidt</name>
+            <email>romain@rtone.fr</email>
+            <organization>Rtone</organization>
+            <organizationUrl>https://rtone.fr/</organizationUrl>
+        </developer>
+    </developers>
 
     <properties>
         <retrofit.version>2.1.0</retrofit.version>
