@@ -6,7 +6,7 @@
 
     <groupId>fr.rtone</groupId>
     <artifactId>sigfox-client</artifactId>
-    <version>1.0</version>
+    <version>1.0.1</version>
     <packaging>jar</packaging>
 
     <name>Sigfox Rest Client</name>
