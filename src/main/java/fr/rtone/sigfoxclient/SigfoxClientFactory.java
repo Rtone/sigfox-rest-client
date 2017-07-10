@@ -16,6 +16,8 @@
 
 package fr.rtone.sigfoxclient;
 
+import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import fr.rtone.sigfoxclient.util.SigfoxApiConstants;
 import okhttp3.Credentials;
 import okhttp3.OkHttpClient;
@@ -79,12 +81,15 @@ public class SigfoxClientFactory {
 
         OkHttpClient client = builder.build();
 
+        ObjectMapper objectMapper = new ObjectMapper();
+        objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+
         // Build Retrofit client
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(SigfoxApiConstants.BASE_URL)
                 .client(client)
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
-                .addConverterFactory(JacksonConverterFactory.create())
+                .addConverterFactory(JacksonConverterFactory.create(objectMapper))
                 .build();
 
         sigfoxClient = retrofit.create(SigfoxClient.class);
