@@ -20,12 +20,15 @@ package fr.rtone.sigfoxclient.util;
  */
 public class SigfoxApiConstants {
 
-    public static final String BASE_URL = "https://backend.sigfox.com";
+    public static String BASE_URL = "https://backend.sigfox.com";
 
-    public static final String GROUPS_API = "api/groups";
+    public final static String GROUPS_API = "api/groups";
 
-    public static final String DEVICE_TYPE_API = "api/devicetypes";
+    public final static String DEVICE_TYPE_API = "api/devicetypes";
 
-    public static final String DEVICE_API = "api/devices";
+    public final static String DEVICE_API = "api/devices";
 
+    public static void setBaseUrl(String baseUrl) {
+        BASE_URL = baseUrl;
+    }
 }
