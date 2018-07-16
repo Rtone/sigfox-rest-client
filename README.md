@@ -11,28 +11,13 @@ to use the sdk,  you will need **java 1.8+** and **Lombok** plugin for your IDE 
 
 #### Install the SDK ####
 
- - The sdk maven module is available on **Rtone Repository**  add the remote (artifactory) repository to your POM:
-
+ - The sdk maven module is available on **Maven Central**:
 ```xml
-   <distributionManagement>
-       <repository>
-           <id>pfiot-repository</id>
-           <name>Platform IoT Rtone</name>
-           <url>https://redmine.rtone.fr/artifactory/pfiot-respository</url>
-       </repository>
-   </distributionManagement>
-```
-
- 
-
- - Add the dependency to your POM:
-
-```xml
-     <dependency>
-         <groupId>fr.rtone</groupId>
-         <artifactId>sigfox-client</artifactId>
-         <version>1.0</version>
-     </dependency>
+    <dependency>
+      <groupId>fr.rtone</groupId>
+      <artifactId>sigfox-client</artifactId>
+      <version>1.0.1</version>
+    </dependency>
 ```
 
 
