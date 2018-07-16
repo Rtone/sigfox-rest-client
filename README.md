@@ -1,6 +1,6 @@
 # Sigfox Rest client #
 
-**Sigfox Rest client** enables java developpers to easly  work with *Sigfox backend*, this **sdk** makes it easy to deal with sigfox backend API, you can get started in few minutes using **maven** .
+**Sigfox Rest client** enables java developers to easily  work with the *Sigfox backend*, this **sdk** makes it easy to deal with Sigfox backend APIs, you can get started in few minutes using **maven** .
 
 
 ----------
