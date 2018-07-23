@@ -1,6 +1,6 @@
 # Sigfox Rest client #
 
-**Sigfox Rest client** enables java developpers to easly  work with *Sigfox backend*, this **sdk** makes it easy to deal with sigfox backend API, you can get started in few minutes using **maven** .
+**Sigfox Rest client** enables java developers to easily  work with the *Sigfox backend*, this **sdk** makes it easy to deal with Sigfox backend APIs, you can get started in few minutes using **maven** .
 
 
 ----------
@@ -11,28 +11,13 @@ to use the sdk,  you will need **java 1.8+** and **Lombok** plugin for your IDE 
 
 #### Install the SDK ####
 
- - The sdk maven module is available on **Rtone Repository**  add the remote (artifactory) repository to your POM:
-
+ - The sdk maven module is available on **Maven Central**:
 ```xml
-   <distributionManagement>
-       <repository>
-           <id>pfiot-repository</id>
-           <name>Platform IoT Rtone</name>
-           <url>https://redmine.rtone.fr/artifactory/pfiot-respository</url>
-       </repository>
-   </distributionManagement>
-```
-
- 
-
- - Add the dependency to your POM:
-
-```xml
-     <dependency>
-         <groupId>fr.rtone</groupId>
-         <artifactId>sigfox-client</artifactId>
-         <version>1.0</version>
-     </dependency>
+    <dependency>
+      <groupId>fr.rtone</groupId>
+      <artifactId>sigfox-client</artifactId>
+      <version>1.0.1</version>
+    </dependency>
 ```
 
 
@@ -76,7 +61,7 @@ If you would like to contribute code, you can do so through GitHub by forking th
 
 Here some guidelines to we'd like you to follow :
 
-###Pull Requests
+### Pull Requests
 
 Before you submit your pull request consider the following guidelines:
 
@@ -84,10 +69,15 @@ Before you submit your pull request consider the following guidelines:
  - Follow our coding style 
  - If the change closes an issue, note that at the end of the commit description ex. **"Fixes #18"**
 
-###Code style
+### Code style
 When submitting code, please ensure you follow the [Intellij IDEA's code style](https://www.jetbrains.com/help/idea/reformatting-source-code.html). 
 
- 
+### License
 
+Copyright 2017 Rtone.
 
- 
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. 
