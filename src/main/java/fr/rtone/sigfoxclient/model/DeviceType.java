@@ -39,7 +39,7 @@ public class DeviceType extends AbstractModel {
     private String contractId;
 
     public enum PayloadType {
-        NON("None"), STRING("String"), CUSTOM("Custom"), GEOLOCATION("Geolocation");
+        NON("None"), STRING("String"), CUSTOM("Custom"), GEOLOCATION("Geolocation"), SENSIT_V2("SensitV2");
 
         private String type;
 
