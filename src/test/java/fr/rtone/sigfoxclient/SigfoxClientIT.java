@@ -15,22 +15,20 @@
  */
 package fr.rtone.sigfoxclient;
 
-import fr.rtone.sigfoxclient.model.SigfoxData;
 import fr.rtone.sigfoxclient.model.Group;
+import fr.rtone.sigfoxclient.model.SigfoxData;
 import okhttp3.logging.HttpLoggingInterceptor;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
-import retrofit2.adapter.rxjava.HttpException;
+import retrofit2.HttpException;
 import rx.observers.TestSubscriber;
 
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-/**
- * @Author: Hani
- */
+
 @Category(SigfoxIntegrationTest.class)
 public class SigfoxClientIT {
 

@@ -20,9 +20,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
-/**
- * @Author: Hani
- */
+
 @Data
 @EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor

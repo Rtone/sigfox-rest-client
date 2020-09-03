@@ -20,9 +20,7 @@ import lombok.NoArgsConstructor;
 
 import java.util.List;
 
-/**
- * @Author: Hani
- */
+
 @Data
 @NoArgsConstructor
 public class DeviceEditResponse {

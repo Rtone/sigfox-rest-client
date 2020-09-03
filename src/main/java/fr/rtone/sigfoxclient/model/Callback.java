@@ -23,9 +23,7 @@ import lombok.NoArgsConstructor;
 
 import java.util.Map;
 
-/**
- * @Author: Hani
- */
+
 @Data
 @EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor

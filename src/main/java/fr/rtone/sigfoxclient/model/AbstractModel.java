@@ -21,7 +21,6 @@ import lombok.EqualsAndHashCode;
 /**
  * Abstract model class, all model entities extend it.
  *
- * @Author: Hani
  */
 @Data
 @EqualsAndHashCode
