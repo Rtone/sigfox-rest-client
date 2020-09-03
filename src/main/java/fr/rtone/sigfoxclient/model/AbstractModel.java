@@ -16,6 +16,7 @@
 package fr.rtone.sigfoxclient.model;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 /**
  * Abstract model class, all model entities extend it.
@@ -23,6 +24,7 @@ import lombok.Data;
  * @Author: Hani
  */
 @Data
+@EqualsAndHashCode
 public abstract class AbstractModel {
 
     private String id;
