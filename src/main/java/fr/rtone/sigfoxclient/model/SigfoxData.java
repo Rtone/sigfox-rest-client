@@ -23,7 +23,6 @@ import java.util.List;
 /**
  * All sigfox list data is wrapped in data object, this generic class is used to deserialize requested data.
  *
- * @Author: Hani
  */
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)

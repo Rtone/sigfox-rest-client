@@ -23,9 +23,7 @@ import java.util.List;
 
 import static fr.rtone.sigfoxclient.util.SigfoxApiConstants.*;
 
-/**
- * @Author: Hani
- */
+
 public interface SigfoxClient {
 
     /**
@@ -71,6 +69,7 @@ public interface SigfoxClient {
      * Delete an existing group
      *
      * @param group group to delete
+     * @return an empty result
      */
     @POST(GROUPS_API + "/delete")
     Observable<Void> deleteGroup(@Body Group group);
@@ -106,6 +105,7 @@ public interface SigfoxClient {
      * Edit an existing group
      *
      * @param deviceType device type to edit
+     * @return an empty result
      */
     @POST(DEVICE_TYPE_API + "/edit")
     Observable<Void> editDeviceType(@Body DeviceType deviceType);
@@ -114,6 +114,7 @@ public interface SigfoxClient {
      * Delete an existing device type
      *
      * @param deviceType device type to edit
+     * @return an empty result
      */
     @POST(DEVICE_TYPE_API + "/delete")
     Observable<Void> deleteDeviceType(@Body DeviceType deviceType);
@@ -142,6 +143,7 @@ public interface SigfoxClient {
      *
      * @param deviceTypeId device type id
      * @param callbackId   callback id
+     * @return an empty result
      */
     @POST(DEVICE_TYPE_API + "/{deviceTypeId}/callbacks/{callbackId}/delete")
     Observable<Void> deleteCallback(@Path("deviceTypeId") String deviceTypeId, @Path("callbackId") String callbackId);
@@ -152,6 +154,7 @@ public interface SigfoxClient {
      * @param deviceTypeId device type id
      * @param callbackId   callback id
      * @param enabled      true to enable the callback, false to disable it
+     * @return an empty result
      */
     @POST(DEVICE_TYPE_API + "/{deviceTypeId}/callbacks/{callbackId}/enable")
     Observable<Void> enableCallback(@Path("deviceTypeId") String deviceTypeId, @Path("callbackId") String callbackId, @Query("enabled") boolean enabled);
@@ -161,7 +164,7 @@ public interface SigfoxClient {
      *
      * @param deviceTypeId device type id
      * @param callbackId  callback id
-     * @return
+     * @return an empty result
      */
     @POST(DEVICE_TYPE_API + "/{deviceTypeId}/callbacks/{callbackId}/downlink")
     Observable<Void> setDownlinkCallback(@Path("deviceTypeId") String deviceTypeId, @Path("callbackId") String callbackId);

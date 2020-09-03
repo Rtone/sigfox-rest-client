@@ -16,7 +16,7 @@ to use the sdk,  you will need **java 1.8+** and **Lombok** plugin for your IDE 
     <dependency>
       <groupId>fr.rtone</groupId>
       <artifactId>sigfox-client</artifactId>
-      <version>1.0.1</version>
+      <version>1.0.2</version>
     </dependency>
 ```
 

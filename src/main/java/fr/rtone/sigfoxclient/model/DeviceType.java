@@ -17,12 +17,12 @@ package fr.rtone.sigfoxclient.model;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
-/**
- * @Author: Hani
- */
+
 @Data
+@EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
 public class DeviceType extends AbstractModel {
 
@@ -39,7 +39,7 @@ public class DeviceType extends AbstractModel {
     private String contractId;
 
     public enum PayloadType {
-        NON("None"), STRING("String"), CUSTOM("Custom"), GEOLOCATION("Geolocation");
+        NON("None"), STRING("String"), CUSTOM("Custom"), GEOLOCATION("Geolocation"), SENSIT_V2("SensitV2");
 
         private String type;
 
