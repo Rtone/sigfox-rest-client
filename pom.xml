@@ -61,7 +61,7 @@
 
         <retrofit.version>2.9.0</retrofit.version>
         <lombok.version>1.18.12</lombok.version>
-        <okhttp3.version>4.8.1</okhttp3.version>
+        <okhttp3.version>3.14.9</okhttp3.version>
         <junit.version>4.13</junit.version>
         <junit.version>4.13</junit.version>
         <assertj.version>3.17.1</assertj.version>
@@ -77,7 +77,6 @@
             <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
         </repository>
     </distributionManagement>
-
 
     <dependencies>
 
@@ -186,9 +185,9 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
-                <version>3.1.1</version>
+                <version>3.2.0</version>
                 <configuration>
-                    <additionalparam>-Xdoclint:none</additionalparam>
+                    <doclint>none</doclint>
                 </configuration>
                 <executions>
                     <execution>
