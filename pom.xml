@@ -62,7 +62,7 @@
         <retrofit.version>2.9.0</retrofit.version>
         <lombok.version>1.18.12</lombok.version>
         <okhttp3.version>3.14.9</okhttp3.version>
-        <junit.version>4.13</junit.version>
+        <junit.version>4.13.1</junit.version>
         <junit.version>4.13</junit.version>
         <assertj.version>3.17.1</assertj.version>
     </properties>
